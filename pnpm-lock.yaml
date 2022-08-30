@@ -20,6 +20,7 @@ specifiers:
   eslint-config-prettier: ^8.4.0
   eslint-plugin-vue: ^8.5.0
   jsdom: ^19.0.0
+  nano-staged: ^0.8.0
   normalize.css: ^8.0.1
   pnpm: ^6.32.1
   postcss: ^8.4.7
@@ -69,6 +70,7 @@ devDependencies:
   eslint-config-prettier: 8.5.0_eslint@8.23.0
   eslint-plugin-vue: 8.7.1_eslint@8.23.0
   jsdom: 19.0.0
+  nano-staged: 0.8.0
   pnpm: 6.34.0
   postcss: 8.4.16
   postcss-html: 1.5.0
@@ -3430,6 +3432,14 @@ packages:
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
+    dev: true
+
+  /nano-staged/0.8.0:
+    resolution: {integrity: sha512-QSEqPGTCJbkHU2yLvfY6huqYPjdBrOaTMKatO1F8nCSrkQGXeKwtCiCnsdxnuMhbg3DTVywKaeWLGCE5oJpq0g==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    hasBin: true
+    dependencies:
+      picocolors: 1.0.0
     dev: true
 
   /nanoid/3.3.4:
