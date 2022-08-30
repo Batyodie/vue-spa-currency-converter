@@ -27,6 +27,19 @@
     "vue-demi": "^0.13.11",
     "vue-template-compiler": "2.7.10"
   },
+  "nano-staged": {
+    "*.{js,ts,vue}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "eslint --fix"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "./node_modules/.bin/nano-staged"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/plugin-proposal-optional-chaining": "^7.16.7",
