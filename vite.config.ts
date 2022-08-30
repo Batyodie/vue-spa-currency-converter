@@ -13,6 +13,16 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+        @import "./src/styles/shared/_variables.scss";
+        @import "./src/styles/shared/_mixins.scss";
+        `,
+      },
+    },
+  },
   plugins: [
     vue(),
     viteCommonjs(),

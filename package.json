@@ -19,11 +19,12 @@
   "author": "Simens",
   "license": "ISC",
   "dependencies": {
-    "vue": "3.2.38",
-    "vue-template-compiler": "2.7.10",
-    "vue-demi": "^0.13.11",
     "@vue/compiler-sfc": "^3.2.38",
-    "@vue/runtime-dom": "^3.2.38"
+    "@vue/runtime-dom": "^3.2.38",
+    "normalize.css": "^8.0.1",
+    "vue": "3.2.38",
+    "vue-demi": "^0.13.11",
+    "vue-template-compiler": "2.7.10"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
