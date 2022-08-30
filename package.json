@@ -33,8 +33,7 @@
       "eslint --cache --fix"
     ],
     "*.scss": [
-      "stylelint --fix",
-      "eslint --fix"
+      "stylelint --fix"
     ]
   },
   "simple-git-hooks": {
