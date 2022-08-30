@@ -1,0 +1,120 @@
+.container {
+    width: 1280px;
+    min-width: 1280px;
+    margin: 0 auto;
+
+    @include respond-to(lTablet) {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+ol li,
+ul li {
+    position: relative;
+    margin: 12px 0 12px 12px;
+}
+
+ol li:before,
+ul li:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #202e35;
+    transform: translateY(-50%);
+}
+
+.tab {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 0 24px 0 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 148%;
+    color: $black;
+    transition: color .4s ease-in-out;
+
+    & p {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    @include respond-to(desktop) {
+        &:hover {
+            color: $Red300;
+            cursor: pointer;
+
+            &:after {
+                left: calc(50% - 12px);
+                width: 24px;
+                background-color: $Red200;
+                transition: all .4s ease-in-out;
+            }
+
+            & .tab__icon {
+                fill: $Red300;
+            }
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 1px);
+        width: 2px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: transparent;
+        transition: all .4s ease-in-out;
+    }
+
+    &.active,
+    &._active,
+    &.is-active {
+        color: $Red;
+
+        & .tab__icon {
+            fill: $Red;
+        }
+    }
+
+    &.active:after,
+    &._active:after,
+    &.is-active:after {
+        left: 0;
+        width: 100%;
+        background-color: $Red;
+    }
+
+    &.disabled {
+        color: $Gray300;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 12px;
+        fill: $Gray400;
+        transition: fill .4s ease-in-out;
+    }
+}
